@@ -457,6 +457,9 @@ def plot_network(data: dict, destination: Path) -> None:
     fig, ax = plt.subplots(figsize=(12, 7.5))
     fig.patch.set_facecolor("#f7f5ef")
     ax.set_facecolor("#f7f5ef")
+    ax.set_xlim(-1.1, 5.9)
+    ax.set_ylim(0.3, 6.1)
+    fig.subplots_adjust(left=0.055, right=0.98, top=0.84, bottom=0.13)
     for index, layer in enumerate(LAYERS):
         nodes = [node for node in data["nodes"] if node["layer"] == layer["id"]]
         x = index * 2.4
@@ -468,6 +471,13 @@ def plot_network(data: dict, destination: Path) -> None:
         start, end = positions[edge["source"]], positions[edge["target"]]
         same_layer = start[0] == end[0]
         curve = 0.24 if same_layer else 0
+        if abs(start[0] - end[0]) > 3:
+            # Route long links outside the middle layer's node row positions.
+            # A straight scope-to-objective line can falsely appear incident on a stakeholder.
+            outer_y = 5.55 if (start[1] + end[1]) / 2 > 3.5 else 0.8
+            start_px, end_px = ax.transData.transform(start), ax.transData.transform(end)
+            outer_px = ax.transData.transform((0, outer_y))[1]
+            curve = 2 * ((start_px[1] + end_px[1]) / 2 - outer_px) / (end_px[0] - start_px[0])
         style = "--" if edge["weightStatus"] == "conflicting" else "-"
         ax.add_patch(FancyArrowPatch(start, end, arrowstyle="-|>", mutation_scale=10, shrinkA=8, shrinkB=8, connectionstyle=f"arc3,rad={curve}",
                                      linewidth=1.1, color="#83908b", alpha=0.55, linestyle=style, zorder=1))
