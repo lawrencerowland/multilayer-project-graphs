@@ -28,4 +28,4 @@ The weights have no established common unit: objective rows include 5, 7 and 10,
 
 ## Reproduce
 
-Use Python 3.12 in a new virtual environment, install `requirements-lock.txt`, then run `python project_graph.py` and `python -m unittest discover -s tests -v`. The verified environment was Python 3.12.14, py3plex 2.0.93, NetworkX 3.7 and Matplotlib 3.11.2. The [runtime receipt](outputs/runtime-receipt.json) records the successful graph checks and package versions. Release verification and source hashes are in [provenance](sources/provenance.json).
+Use Python 3.12 in a new virtual environment, install `requirements-lock.txt`, then run `python project_graph.py` and `python -m unittest discover -s tests -v`. This run used Python 3.12.14, py3plex 2.0.93, NetworkX 3.7 and Matplotlib 3.11.2. The [runtime receipt](outputs/runtime-receipt.json) records the successful graph checks and package versions. Release verification and source hashes are in [provenance](sources/provenance.json).

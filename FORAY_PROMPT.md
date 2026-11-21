@@ -1,7 +1,7 @@
 # Foray 342 — What do project layers reveal?
 
 Established: 21 November 2026  
-Status: first essai computed and checked; publication verification in progress. The wider End remains open.  
+Status: first essai published and checked. The wider End remains open.  
 PW-ID: `PW-342`  
 Foray-ID: `FORAY-342-PROJECT-LAYERS`  
 Primary level: Level 1 — improving what practitioners can inspect, question and choose about a project through its connected representations.
@@ -44,7 +44,7 @@ An interactive public reading copy should let a reader inspect the layers, follo
 
 ## Means and explanatory route
 
-The independent repository is [multilayer-project-graphs](https://github.com/lawrencerowland/multilayer-project-graphs); its intended public entrance is [the foray](https://experimentsin.ai/multilayer-project-graphs/) with [Essai 01](https://experimentsin.ai/multilayer-project-graphs/essai-01/). Publication status is established by the deployment and ordinary-reader checks, separately from source preparation.
+The independent repository is [multilayer-project-graphs](https://github.com/lawrencerowland/multilayer-project-graphs); its public entrance is [the foray](https://experimentsin.ai/multilayer-project-graphs/) with [Essai 01](https://experimentsin.ai/multilayer-project-graphs/essai-01/). Publication status is established by the deployment and ordinary-reader checks, separately from source preparation.
 
 Use Lawrence's original notebook data and commentary, the retained [Library guide](https://experimentsin.ai/library/models/rail-stakeholders-objectives-scope.html), and the current [py3plex source and documentation](https://github.com/SkBlaz/py3plex). Read the relevant implementations and primary methods when relying on an algorithm. Attribute the upstream tool separately from Lawrence's example and our new interpretation; preserve applicable notices.
 
