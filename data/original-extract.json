@@ -1,0 +1,308 @@
+{
+  "sourceNotebook": "sources/notebooks/stakeholder_objectives.ipynb",
+  "sourceCommit": "9bdfca4aa40a5115e8697fbd64e67347dc7a0a9a",
+  "originalRuntime": {
+    "directed": true,
+    "parallelEdges": true,
+    "basis": "The 2022 multi_layer_network constructor defaults to directed=True and creates a NetworkX MultiDiGraph."
+  },
+  "rows": [
+    {
+      "id": "objectives-01",
+      "list": "objectives",
+      "row": 1,
+      "cell": 2,
+      "source": "sustain_carbon",
+      "sourceLayer": "objectives",
+      "target": "new_station",
+      "targetLayer": "objectives",
+      "weight": 10
+    },
+    {
+      "id": "objectives-02",
+      "list": "objectives",
+      "row": 2,
+      "cell": 2,
+      "source": "sustain_carbon",
+      "sourceLayer": "objectives",
+      "target": "New_construction_method",
+      "targetLayer": "objectives",
+      "weight": 7
+    },
+    {
+      "id": "objectives-03",
+      "list": "objectives",
+      "row": 3,
+      "cell": 2,
+      "source": "faster_trains",
+      "sourceLayer": "objectives",
+      "target": "new_station",
+      "targetLayer": "objectives",
+      "weight": 5
+    },
+    {
+      "id": "stakeholders-01",
+      "list": "stakeholders",
+      "row": 1,
+      "cell": 2,
+      "source": "Town_council",
+      "sourceLayer": "stakeholders",
+      "target": "Train_Operator",
+      "targetLayer": "stakeholders",
+      "weight": 0.4
+    },
+    {
+      "id": "stakeholders-02",
+      "list": "stakeholders",
+      "row": 2,
+      "cell": 2,
+      "source": "Town_council",
+      "sourceLayer": "stakeholders",
+      "target": "Safety_Board",
+      "targetLayer": "stakeholders",
+      "weight": 0.1
+    },
+    {
+      "id": "stakeholders-03",
+      "list": "stakeholders",
+      "row": 3,
+      "cell": 2,
+      "source": "Safety_Board",
+      "sourceLayer": "stakeholders",
+      "target": "Train_manufacturer",
+      "targetLayer": "stakeholders",
+      "weight": 0.6
+    },
+    {
+      "id": "scope-01",
+      "list": "scope",
+      "row": 1,
+      "cell": 2,
+      "source": "civil_works",
+      "sourceLayer": "scope",
+      "target": "new_track",
+      "targetLayer": "scope",
+      "weight": 0.7
+    },
+    {
+      "id": "scope-02",
+      "list": "scope",
+      "row": 2,
+      "cell": 2,
+      "source": "in_cab_signalling",
+      "sourceLayer": "scope",
+      "target": "new_track",
+      "targetLayer": "scope",
+      "weight": 0.6
+    },
+    {
+      "id": "scope-03",
+      "list": "scope",
+      "row": 3,
+      "cell": 2,
+      "source": "new_trains",
+      "sourceLayer": "scope",
+      "target": "new_track",
+      "targetLayer": "scope",
+      "weight": 0.7
+    },
+    {
+      "id": "scope-04",
+      "list": "scope",
+      "row": 4,
+      "cell": 2,
+      "source": "new_trains",
+      "sourceLayer": "scope",
+      "target": "in_cab_signalling",
+      "targetLayer": "scope",
+      "weight": 0.9
+    },
+    {
+      "id": "scope-05",
+      "list": "scope",
+      "row": 5,
+      "cell": 2,
+      "source": "telecoms",
+      "sourceLayer": "scope",
+      "target": "in_cab_signalling",
+      "targetLayer": "scope",
+      "weight": 0.9
+    },
+    {
+      "id": "scope-06",
+      "list": "scope",
+      "row": 6,
+      "cell": 2,
+      "source": "telecoms",
+      "sourceLayer": "scope",
+      "target": "new_trains",
+      "targetLayer": "scope",
+      "weight": 0.9
+    },
+    {
+      "id": "inter_layer_edges-01",
+      "list": "inter_layer_edges",
+      "row": 1,
+      "cell": 2,
+      "source": "sustain_carbon",
+      "sourceLayer": "objectives",
+      "target": "Town_council",
+      "targetLayer": "stakeholders",
+      "weight": 0.6
+    },
+    {
+      "id": "inter_layer_edges-02",
+      "list": "inter_layer_edges",
+      "row": 2,
+      "cell": 2,
+      "source": "sustain_carbon",
+      "sourceLayer": "objectives",
+      "target": "Train_manufacturer",
+      "targetLayer": "stakeholders",
+      "weight": 0.6
+    },
+    {
+      "id": "inter_layer_edges-03",
+      "list": "inter_layer_edges",
+      "row": 3,
+      "cell": 2,
+      "source": "faster_trains",
+      "sourceLayer": "objectives",
+      "target": "Train_manufacturer",
+      "targetLayer": "stakeholders",
+      "weight": 1
+    },
+    {
+      "id": "inter_layer_edges-04",
+      "list": "inter_layer_edges",
+      "row": 4,
+      "cell": 2,
+      "source": "faster_trains",
+      "sourceLayer": "objectives",
+      "target": "Safety_Board",
+      "targetLayer": "stakeholders",
+      "weight": 0.8
+    },
+    {
+      "id": "inter_layer_edges-05",
+      "list": "inter_layer_edges",
+      "row": 5,
+      "cell": 2,
+      "source": "new_trains",
+      "sourceLayer": "scope",
+      "target": "faster_trains",
+      "targetLayer": "objectives",
+      "weight": 0.9
+    },
+    {
+      "id": "inter_layer_edges-06",
+      "list": "inter_layer_edges",
+      "row": 6,
+      "cell": 2,
+      "source": "civil_works",
+      "sourceLayer": "scope",
+      "target": "New_construction_method",
+      "targetLayer": "objectives",
+      "weight": 0.7
+    },
+    {
+      "id": "inter_layer_edges-07",
+      "list": "inter_layer_edges",
+      "row": 7,
+      "cell": 2,
+      "source": "new_track",
+      "sourceLayer": "scope",
+      "target": "sustain_carbon",
+      "targetLayer": "objectives",
+      "weight": 0.5
+    },
+    {
+      "id": "inter_layer_edges-08",
+      "list": "inter_layer_edges",
+      "row": 8,
+      "cell": 2,
+      "source": "civil_works",
+      "sourceLayer": "scope",
+      "target": "new_station",
+      "targetLayer": "objectives",
+      "weight": 0.6
+    },
+    {
+      "id": "inter_layer_edges-09",
+      "list": "inter_layer_edges",
+      "row": 9,
+      "cell": 2,
+      "source": "new_trains",
+      "sourceLayer": "scope",
+      "target": "faster_trains",
+      "targetLayer": "objectives",
+      "weight": 0.9
+    },
+    {
+      "id": "inter_layer_edges-10",
+      "list": "inter_layer_edges",
+      "row": 10,
+      "cell": 2,
+      "source": "new_trains",
+      "sourceLayer": "scope",
+      "target": "Safety_Board",
+      "targetLayer": "stakeholders",
+      "weight": 0.7
+    },
+    {
+      "id": "inter_layer_edges-11",
+      "list": "inter_layer_edges",
+      "row": 11,
+      "cell": 2,
+      "source": "new_trains",
+      "sourceLayer": "scope",
+      "target": "Train_manfacturer",
+      "targetLayer": "stakeholders",
+      "weight": 1
+    },
+    {
+      "id": "inter_layer_edges-12",
+      "list": "inter_layer_edges",
+      "row": 12,
+      "cell": 2,
+      "source": "telecoms",
+      "sourceLayer": "scope",
+      "target": "Safety_Board",
+      "targetLayer": "stakeholders",
+      "weight": 0.6
+    },
+    {
+      "id": "inter_layer_edges-13",
+      "list": "inter_layer_edges",
+      "row": 13,
+      "cell": 2,
+      "source": "in_cab_signalling",
+      "sourceLayer": "scope",
+      "target": "Train_Operator",
+      "targetLayer": "stakeholders",
+      "weight": 0.6
+    },
+    {
+      "id": "inter_layer_edges-14",
+      "list": "inter_layer_edges",
+      "row": 14,
+      "cell": 2,
+      "source": "civil_works",
+      "sourceLayer": "scope",
+      "target": "Town_council",
+      "targetLayer": "stakeholders",
+      "weight": 0.4
+    },
+    {
+      "id": "inter_layer_edges-15",
+      "list": "inter_layer_edges",
+      "row": 15,
+      "cell": 2,
+      "source": "new_trains",
+      "sourceLayer": "scope",
+      "target": "Safety_Board",
+      "targetLayer": "stakeholders",
+      "weight": 0.9
+    }
+  ]
+}

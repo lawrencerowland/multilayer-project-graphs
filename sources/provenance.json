@@ -1,0 +1,157 @@
+{
+  "repo": "lawrencerowland/py3plex",
+  "commit": "9bdfca4aa40a5115e8697fbd64e67347dc7a0a9a",
+  "verifiedDate": "2026-11-21",
+  "files": [
+    {
+      "path": "sources/notebooks/stakeholder_objectives.ipynb",
+      "sourcePath": "stakeholder_objectives.ipynb",
+      "gitBlobSha": "bb6d31e3177f9c7ae913ea653560c0cd5c0f90f5",
+      "sha256": "08b868188414219183375870a95b5f6e9e5421307e7b7879a978fdf7ded33df1",
+      "bytes": 178106,
+      "url": "https://github.com/lawrencerowland/py3plex/blob/9bdfca4aa40a5115e8697fbd64e67347dc7a0a9a/stakeholder_objectives.ipynb",
+      "sourceCellsSha256": "88f4c160dbfa934f1adab80e9194c5fa795f0f7a3b99820196907a5886110594",
+      "originalOutputSummary": {
+        "counts": {
+          "stream": 23,
+          "display_data": 13,
+          "text/plain": 13,
+          "image/png": 7
+        },
+        "errors": []
+      },
+      "publishedSha256": "cdb576b77a228762d64f9b24642bd5c8289b18393559624bed336bd58229cbcf",
+      "publicationEdits": [
+        "Cleared saved outputs",
+        "Cleared execution counts",
+        "Removed incidental metadata",
+        "Preserved source cell types and source text"
+      ]
+    },
+    {
+      "path": "sources/notebooks/stakeholder_objectives-checkpoint.ipynb",
+      "sourcePath": ".ipynb_checkpoints/stakeholder_objectives-checkpoint.ipynb",
+      "gitBlobSha": "09beb1546e70cc04d69765561f180521b04985c0",
+      "sha256": "55a4725226f36829168318017183b78099b119ea3bd873e1fec483cbf549ce37",
+      "bytes": 289696,
+      "url": "https://github.com/lawrencerowland/py3plex/blob/9bdfca4aa40a5115e8697fbd64e67347dc7a0a9a/.ipynb_checkpoints/stakeholder_objectives-checkpoint.ipynb",
+      "sourceCellsSha256": "f25c98621c95f3a259ed4af2c891f43dbdf288233adf3014ebc5d102a9dd3d42",
+      "originalOutputSummary": {
+        "counts": {
+          "stream": 71,
+          "error": 2,
+          "display_data": 6,
+          "image/png": 5,
+          "text/plain": 6
+        },
+        "errors": [
+          {
+            "cell": 2,
+            "type": "TypeError"
+          },
+          {
+            "cell": 14,
+            "type": "NameError"
+          }
+        ]
+      },
+      "retained": false,
+      "reason": "Graph definitions exactly duplicate the main notebook; tutorial cells duplicate Working through the easy examples, apart from the early exploratory visualization and SimRank cell preserved in checkpoint-note.md."
+    },
+    {
+      "path": "sources/notebooks/LR test the visualisations.ipynb",
+      "sourcePath": "LR test the visualisations.ipynb",
+      "gitBlobSha": "76e304ba3a40442d915efb49a145ff0bee010e2e",
+      "sha256": "cbd60951bc424fd1514b5a9881f0b08d45899f2d8f1d9e1432defa82d2de4a10",
+      "bytes": 542191,
+      "url": "https://github.com/lawrencerowland/py3plex/blob/9bdfca4aa40a5115e8697fbd64e67347dc7a0a9a/LR%20test%20the%20visualisations.ipynb",
+      "sourceCellsSha256": "1abbd037d9b6afc0d13df33b46655259e6e94c065c134dc04ca8f07e1a6ebde8",
+      "originalOutputSummary": {
+        "counts": {
+          "stream": 115,
+          "display_data": 11,
+          "text/plain": 11,
+          "image/png": 10,
+          "error": 3
+        },
+        "errors": [
+          {
+            "cell": 12,
+            "type": "SystemExit"
+          },
+          {
+            "cell": 13,
+            "type": "NameError"
+          },
+          {
+            "cell": 14,
+            "type": "KeyboardInterrupt"
+          }
+        ]
+      },
+      "publishedSha256": "1241357ae660ce396283627b6bb85a533a24ef795517c2d7da813944449ebe28",
+      "publicationEdits": [
+        "Cleared saved outputs",
+        "Cleared execution counts",
+        "Removed incidental metadata",
+        "Preserved source cell types and source text"
+      ]
+    },
+    {
+      "path": "sources/notebooks/Working through the easy examples.ipynb",
+      "sourcePath": "Working through the easy examples.ipynb",
+      "gitBlobSha": "ef9728514aaa5575fa226ccefa115fba564a103e",
+      "sha256": "f1743971315693f5c66fc101db00c417d6c50ae4120d1cc2d5f102c504735e55",
+      "bytes": 358850,
+      "url": "https://github.com/lawrencerowland/py3plex/blob/9bdfca4aa40a5115e8697fbd64e67347dc7a0a9a/Working%20through%20the%20easy%20examples.ipynb",
+      "sourceCellsSha256": "6b94ab29676578e50b214fd38baffe86af1efd559443b4ae3a641ea2758159e5",
+      "originalOutputSummary": {
+        "counts": {
+          "stream": 78,
+          "display_data": 8,
+          "text/plain": 8,
+          "image/png": 7,
+          "error": 1
+        },
+        "errors": [
+          {
+            "cell": 13,
+            "type": "NameError"
+          }
+        ]
+      },
+      "publishedSha256": "74bd23d7ef089115521245eecd34ae846cedbb36eead22ac8ee17f6af595ee6d",
+      "publicationEdits": [
+        "Cleared saved outputs",
+        "Cleared execution counts",
+        "Removed incidental metadata",
+        "Preserved source cell types and source text"
+      ]
+    },
+    {
+      "path": "sources/LICENSE-py3plex-2022.txt",
+      "sourcePath": "LICENSE",
+      "gitBlobSha": "d897e0e2ac99560ff527e3b2152b8344d231e398",
+      "sha256": "8ee275e9417ea28ea780a876f19314638386b6d6acb19f629fb799a077e84227",
+      "bytes": 1506,
+      "url": "https://github.com/lawrencerowland/py3plex/blob/9bdfca4aa40a5115e8697fbd64e67347dc7a0a9a/LICENSE"
+    }
+  ],
+  "py3plexRelease": {
+    "version": "2.0.93",
+    "requiresPython": ">=3.8",
+    "sourceUrl": "https://pypi.org/project/py3plex/",
+    "files": [
+      {
+        "filename": "py3plex-2.0.93-py3-none-any.whl",
+        "sha256": "0e48924798bb9f4896f37700e5c665729cdfc601f57a1ae8963aca51a757dea8",
+        "uploaded": "2026-11-11T11:17:10.201377Z"
+      },
+      {
+        "filename": "py3plex-2.0.93.tar.gz",
+        "sha256": "86ae62856f42ea62fb7424e20c9a7f2f60f2d80f71706291f98046b9daa8148c",
+        "uploaded": "2026-11-11T11:17:12.072171Z"
+      }
+    ]
+  }
+}

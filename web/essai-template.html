@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore a small railway project model through its objectives, stakeholders and scope. Compare the layered view with the same connections in one plane.">
+  <title>Rail through three layers · What do project layers reveal?</title>
+  <link rel="canonical" href="https://experimentsin.ai/multilayer-project-graphs/essai-01/">
+  <link rel="stylesheet" href="../web/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#explorer">Skip to the explorer</a>
+  <header class="page-header">
+    <a class="home-link" href="../"><span class="brand-mark" aria-hidden="true">↗</span> What do project layers reveal?</a>
+    <nav aria-label="Foray"><a href="../scenario.html">Scenario</a><a href="../purpose.html">Purpose</a><a href="findings.html">Findings and method</a></nav>
+  </header>
+  <main>
+    <section class="introduction" aria-labelledby="page-title">
+      <div><p class="eyebrow">First essai · A railway example</p><h1 id="page-title">Rail through<br><em>three layers.</em></h1></div>
+      <div class="introduction-copy"><p class="question">Who and what connects to a project objective?</p><p>Keep objectives, stakeholders and scope in view while following the links between them. Then flatten the same model and see what becomes harder to read.</p><p class="source-caption">Reconstructed from Lawrence’s original project notebook. <a href="#method">Read the modelling choices</a></p></div>
+    </section>
+    <section class="explorer" id="explorer" aria-label="Explore the railway model">
+      <div class="reading-bar"><span class="reading-label">Start with a question</span><div id="guides" class="guide-buttons" aria-label="Guided readings"></div></div>
+      <div class="explorer-toolbar">
+        <div class="tab-controls" role="tablist" aria-label="Explore as"><button id="graph-tab" role="tab" aria-controls="graph-view" aria-selected="true" data-tab="graph">Graph</button><button id="index-tab" role="tab" aria-controls="index-view" aria-selected="false" data-tab="index">Connection index</button></div>
+        <div class="view-switch" role="group" aria-label="Graph layout"><button data-layout="layered" aria-pressed="true">Three layers</button><button data-layout="flat" aria-pressed="false">One plane</button></div>
+        <button class="text-button reset-button" id="reset">Show whole model <span aria-hidden="true">↺</span></button>
+      </div>
+      <div class="filters"><label class="search-label"><span>Find a record</span><input id="search" type="search" placeholder="Carbon, council, track…" autocomplete="off"></label><label><span>Layer</span><select id="layer-filter"><option value="all">All layers</option></select></label><label><span>Connection</span><select id="relation-filter"><option value="all">All types</option></select></label><div class="visible-count" id="visible-count" aria-live="polite"></div></div>
+      <div class="explorer-body">
+        <div class="main-view">
+          <section id="graph-view" role="tabpanel" aria-labelledby="graph-tab">
+            <div class="graph-caption"><p id="layout-caption"></p><button id="neighbourhood" aria-pressed="false">Only connected records</button></div>
+            <div class="graph-scroll" tabindex="0" role="region" aria-label="Railway graph. Scroll horizontally on a small screen, or use the connection index."><svg id="network" viewBox="0 0 900 690" role="group" aria-label="Railway project connections"></svg></div>
+            <div class="graph-key"><span><i class="line-key" aria-hidden="true"></i> Arrow follows the recorded link</span><span><i class="line-key uncertain" aria-hidden="true"></i> Multiple source weights</span></div>
+            <p class="graph-note">Select a record or link to read its source. Arrow direction describes the notebook’s model. A link carries no causal or probability claim.</p>
+          </section>
+          <section id="index-view" role="tabpanel" aria-labelledby="index-tab" hidden><div class="index-intro"><h2>Read the model record by record</h2><p>Each card opens the same connections and source rows as the graph.</p></div><div id="node-index" class="node-index"></div></section>
+        </div>
+        <aside id="inspector" class="inspector" aria-label="Selected record details" aria-live="polite"></aside>
+      </div>
+    </section>
+    <section class="model-notes" id="method" aria-labelledby="method-title">
+      <div class="method-intro"><p class="eyebrow">Under the drawing</p><h2 id="method-title">A small model.<br>Visible choices.</h2><p>Layer membership gives each record a role. The flat view retains the records and links while removing their spatial grouping.</p><p><a class="inline-link" href="findings.html">Read the findings and method <span aria-hidden="true">↗</span></a></p><a class="inline-link" href="commentary.html">Read the original commentary <span aria-hidden="true">↗</span></a></div>
+      <div class="method-content"><div id="model-statistics" class="statistics"></div><div class="method-grid"><div><h3>What a line means</h3><p id="direction-note">The original notebook creates a directed network. This edition preserves recorded direction. Reading all connections around a record includes both incoming and outgoing links.</p></div><div><h3>What a weight means</h3><p>Weights are preserved as entered. Their units and scale are unspecified. Every drawn line has the same width, so a value of 10 is never presented as a stronger claim than a value of 0.9.</p></div></div><details class="method-detail"><summary>Corrections and unresolved choices</summary><div id="corrections"></div></details><details class="method-detail"><summary>Current Python run and data schema</summary><div id="run-results"></div><div id="schema-details"></div></details><details class="method-detail"><summary>Source records</summary><div id="sources"></div></details><div class="export-controls"><button id="download-data">Download model JSON</button><button id="download-svg">Download current drawing</button></div></div>
+    </section>
+  </main>
+  <footer><a href="../">Back to the foray</a><span>Lawrence Rowland · Experiments in AI</span></footer>
+  <script type="application/json" id="graph-data">__GRAPH_DATA__</script>
+  <script type="application/json" id="run-data">__RUN_DATA__</script>
+  <script src="../web/app.js"></script>
+</body>
+</html>

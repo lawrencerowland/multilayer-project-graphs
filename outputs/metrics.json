@@ -1,0 +1,151 @@
+{
+  "nodeCount": 13,
+  "edgeCount": 26,
+  "associationCount": 25,
+  "layerCount": 3,
+  "componentCount": 1,
+  "crossLayerEdges": 13,
+  "intralayerEdges": 12,
+  "isolatedNodeCount": 0,
+  "density": 0.32051282051282054,
+  "densityProjection": "simple-undirected",
+  "directedDensity": 0.16025641025641027,
+  "originalNodeCount": 14,
+  "originalEdgeRecords": 27,
+  "conflictingWeightEdges": 1,
+  "layerCounts": [
+    {
+      "id": "objectives",
+      "label": "Objectives",
+      "nodes": 4,
+      "intralayerEdges": 3,
+      "density": 0.5,
+      "densityProjection": "simple-undirected",
+      "directedDensity": 0.25
+    },
+    {
+      "id": "stakeholders",
+      "label": "Stakeholders",
+      "nodes": 4,
+      "intralayerEdges": 3,
+      "density": 0.5,
+      "densityProjection": "simple-undirected",
+      "directedDensity": 0.25
+    },
+    {
+      "id": "scope",
+      "label": "Scope",
+      "nodes": 5,
+      "intralayerEdges": 6,
+      "density": 0.6,
+      "densityProjection": "simple-undirected",
+      "directedDensity": 0.3
+    }
+  ],
+  "relationCounts": {
+    "stakeholder-association": 3,
+    "scope-objective": 4,
+    "scope-stakeholder": 5,
+    "scope-association": 6,
+    "objective-stakeholder": 4,
+    "objective-association": 3
+  },
+  "degreeRanking": [
+    {
+      "id": "new_trains",
+      "label": "New trains",
+      "degree": 6,
+      "crossLayerDegree": 3
+    },
+    {
+      "id": "Safety_Board",
+      "label": "Safety board",
+      "degree": 5,
+      "crossLayerDegree": 3
+    },
+    {
+      "id": "sustain_carbon",
+      "label": "Carbon sustainability",
+      "degree": 5,
+      "crossLayerDegree": 3
+    },
+    {
+      "id": "Town_council",
+      "label": "Town council",
+      "degree": 4,
+      "crossLayerDegree": 2
+    },
+    {
+      "id": "Train_manufacturer",
+      "label": "Train manufacturer",
+      "degree": 4,
+      "crossLayerDegree": 3
+    },
+    {
+      "id": "civil_works",
+      "label": "Civil works",
+      "degree": 4,
+      "crossLayerDegree": 3
+    },
+    {
+      "id": "faster_trains",
+      "label": "Faster trains",
+      "degree": 4,
+      "crossLayerDegree": 3
+    },
+    {
+      "id": "in_cab_signalling",
+      "label": "In-cab signalling",
+      "degree": 4,
+      "crossLayerDegree": 1
+    },
+    {
+      "id": "new_track",
+      "label": "New track",
+      "degree": 4,
+      "crossLayerDegree": 1
+    },
+    {
+      "id": "new_station",
+      "label": "New station",
+      "degree": 3,
+      "crossLayerDegree": 1
+    },
+    {
+      "id": "telecoms",
+      "label": "Telecoms",
+      "degree": 3,
+      "crossLayerDegree": 1
+    },
+    {
+      "id": "New_construction_method",
+      "label": "New construction method",
+      "degree": 2,
+      "crossLayerDegree": 1
+    },
+    {
+      "id": "Train_Operator",
+      "label": "Train operator",
+      "degree": 2,
+      "crossLayerDegree": 1
+    }
+  ],
+  "analysisPolicy": "Runtime edge count includes distinct parallel records. Degree, cross-layer counts and density use distinct endpoint pairs. Connected degree uses an explicit undirected projection; in/out degree uses recorded direction. All metrics exclude source weights.",
+  "metricDefinitions": {
+    "edgeCount": "Directed MultiDiGraph records, including the two conflicting safety weights.",
+    "associationCount": "Simple directed graph: distinct ordered endpoint pairs; parallel records collapsed.",
+    "componentCount": "Connected components of the simple undirected projection (weak components of the directed graph).",
+    "crossLayerEdges": "Simple undirected projection: distinct endpoint pairs in different layers.",
+    "intralayerEdges": "Simple undirected projection: distinct endpoint pairs in the same layer.",
+    "isolatedNodeCount": "Simple undirected projection: nodes with no incident edges.",
+    "density": "Simple undirected projection: m / (n * (n - 1) / 2), ignoring weights and parallel records.",
+    "directedDensity": "Simple directed graph: m / (n * (n - 1)), ignoring weights and parallel records.",
+    "degreeRanking": "Simple undirected projection: number of distinct adjacent entities, regardless of orientation.",
+    "layerCounts": "Each layer's induced simple undirected subgraph; directedDensity uses its simple directed counterpart.",
+    "relationCounts": "Simple directed graph: display pairs grouped by their endpoint-layer relation.",
+    "node.inDegree": "Distinct predecessors in the simple directed graph.",
+    "node.outDegree": "Distinct successors in the simple directed graph.",
+    "node.degree": "Distinct neighbours in the simple undirected projection.",
+    "node.crossLayerDegree": "Distinct neighbours in other layers in the simple undirected projection."
+  }
+}

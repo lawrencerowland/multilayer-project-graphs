@@ -1,0 +1,1378 @@
+{
+  "meta": {
+    "title": "A railway project through three layers",
+    "subtitle": "Trace how objectives, stakeholders and scope connect.",
+    "sourceDate": "2022-10-17",
+    "editionDate": "2026-11-21",
+    "networkType": "multilayer",
+    "directed": true,
+    "nodeIdentity": "Each entity belongs to exactly one layer. Explicit edges connect different entities across layers.",
+    "weightPolicy": "Every distinct original weight is retained. Their units and scale were not defined. The conflicting parallel records remain separate in the runtime graph. Topological metrics ignore their weights.",
+    "pathPolicy": "Directed routes follow the recorded orientation. Connected-neighbour views explicitly ignore orientation. Neither establishes causation, delivery sequence or responsibility. Source weights are never treated as distances or probabilities.",
+    "scopeNote": "This is a small hand-entered teaching example. The notebook groups aspirations and proposed choices together in the objectives layer.",
+    "directionPolicy": "The original code created directed parallel edges. Both the original reconstruction and corrected runtime preserve that orientation. Arrowheads mean recorded direction; their project meaning remains undocumented."
+  },
+  "layers": [
+    {
+      "id": "objectives",
+      "label": "Objectives",
+      "description": "The notebook's ambitions and proposed choices."
+    },
+    {
+      "id": "stakeholders",
+      "label": "Stakeholders",
+      "description": "Organisations with interests in the railway scheme."
+    },
+    {
+      "id": "scope",
+      "label": "Scope",
+      "description": "Work and systems that could be delivered."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "sustain_carbon",
+      "label": "Carbon sustainability",
+      "layer": "objectives",
+      "type": "objective",
+      "sourceName": "sustain_carbon",
+      "originalNames": [
+        "sustain_carbon"
+      ],
+      "summary": "Carbon sustainability in the notebook’s objectives layer.",
+      "degree": 5,
+      "inDegree": 1,
+      "outDegree": 4,
+      "crossLayerDegree": 3,
+      "bridgedLayers": [
+        "scope",
+        "stakeholders"
+      ],
+      "neighbours": [
+        "New_construction_method",
+        "Town_council",
+        "Train_manufacturer",
+        "new_station",
+        "new_track"
+      ]
+    },
+    {
+      "id": "new_station",
+      "label": "New station",
+      "layer": "objectives",
+      "type": "objective",
+      "sourceName": "new_station",
+      "originalNames": [
+        "new_station"
+      ],
+      "summary": "New station in the notebook’s objectives layer.",
+      "degree": 3,
+      "inDegree": 3,
+      "outDegree": 0,
+      "crossLayerDegree": 1,
+      "bridgedLayers": [
+        "scope"
+      ],
+      "neighbours": [
+        "civil_works",
+        "faster_trains",
+        "sustain_carbon"
+      ]
+    },
+    {
+      "id": "New_construction_method",
+      "label": "New construction method",
+      "layer": "objectives",
+      "type": "objective",
+      "sourceName": "New_construction_method",
+      "originalNames": [
+        "New_construction_method"
+      ],
+      "summary": "New construction method in the notebook’s objectives layer.",
+      "degree": 2,
+      "inDegree": 2,
+      "outDegree": 0,
+      "crossLayerDegree": 1,
+      "bridgedLayers": [
+        "scope"
+      ],
+      "neighbours": [
+        "civil_works",
+        "sustain_carbon"
+      ]
+    },
+    {
+      "id": "faster_trains",
+      "label": "Faster trains",
+      "layer": "objectives",
+      "type": "objective",
+      "sourceName": "faster_trains",
+      "originalNames": [
+        "faster_trains"
+      ],
+      "summary": "Faster trains in the notebook’s objectives layer.",
+      "degree": 4,
+      "inDegree": 1,
+      "outDegree": 3,
+      "crossLayerDegree": 3,
+      "bridgedLayers": [
+        "scope",
+        "stakeholders"
+      ],
+      "neighbours": [
+        "Safety_Board",
+        "Train_manufacturer",
+        "new_station",
+        "new_trains"
+      ]
+    },
+    {
+      "id": "Town_council",
+      "label": "Town council",
+      "layer": "stakeholders",
+      "type": "stakeholder",
+      "sourceName": "Town_council",
+      "originalNames": [
+        "Town_council"
+      ],
+      "summary": "Town council in the notebook’s stakeholders layer.",
+      "degree": 4,
+      "inDegree": 2,
+      "outDegree": 2,
+      "crossLayerDegree": 2,
+      "bridgedLayers": [
+        "objectives",
+        "scope"
+      ],
+      "neighbours": [
+        "Safety_Board",
+        "Train_Operator",
+        "civil_works",
+        "sustain_carbon"
+      ]
+    },
+    {
+      "id": "Train_Operator",
+      "label": "Train operator",
+      "layer": "stakeholders",
+      "type": "stakeholder",
+      "sourceName": "Train_Operator",
+      "originalNames": [
+        "Train_Operator"
+      ],
+      "summary": "Train operator in the notebook’s stakeholders layer.",
+      "degree": 2,
+      "inDegree": 2,
+      "outDegree": 0,
+      "crossLayerDegree": 1,
+      "bridgedLayers": [
+        "scope"
+      ],
+      "neighbours": [
+        "Town_council",
+        "in_cab_signalling"
+      ]
+    },
+    {
+      "id": "Safety_Board",
+      "label": "Safety board",
+      "layer": "stakeholders",
+      "type": "stakeholder",
+      "sourceName": "Safety_Board",
+      "originalNames": [
+        "Safety_Board"
+      ],
+      "summary": "Safety board in the notebook’s stakeholders layer.",
+      "degree": 5,
+      "inDegree": 4,
+      "outDegree": 1,
+      "crossLayerDegree": 3,
+      "bridgedLayers": [
+        "objectives",
+        "scope"
+      ],
+      "neighbours": [
+        "Town_council",
+        "Train_manufacturer",
+        "faster_trains",
+        "new_trains",
+        "telecoms"
+      ]
+    },
+    {
+      "id": "Train_manufacturer",
+      "label": "Train manufacturer",
+      "layer": "stakeholders",
+      "type": "stakeholder",
+      "sourceName": "Train_manufacturer",
+      "originalNames": [
+        "Train_manufacturer",
+        "Train_manfacturer"
+      ],
+      "summary": "Train manufacturer in the notebook’s stakeholders layer.",
+      "degree": 4,
+      "inDegree": 4,
+      "outDegree": 0,
+      "crossLayerDegree": 3,
+      "bridgedLayers": [
+        "objectives",
+        "scope"
+      ],
+      "neighbours": [
+        "Safety_Board",
+        "faster_trains",
+        "new_trains",
+        "sustain_carbon"
+      ]
+    },
+    {
+      "id": "civil_works",
+      "label": "Civil works",
+      "layer": "scope",
+      "type": "scope",
+      "sourceName": "civil_works",
+      "originalNames": [
+        "civil_works"
+      ],
+      "summary": "Civil works in the notebook’s scope layer.",
+      "degree": 4,
+      "inDegree": 0,
+      "outDegree": 4,
+      "crossLayerDegree": 3,
+      "bridgedLayers": [
+        "objectives",
+        "stakeholders"
+      ],
+      "neighbours": [
+        "New_construction_method",
+        "Town_council",
+        "new_station",
+        "new_track"
+      ]
+    },
+    {
+      "id": "new_track",
+      "label": "New track",
+      "layer": "scope",
+      "type": "scope",
+      "sourceName": "new_track",
+      "originalNames": [
+        "new_track"
+      ],
+      "summary": "New track in the notebook’s scope layer.",
+      "degree": 4,
+      "inDegree": 3,
+      "outDegree": 1,
+      "crossLayerDegree": 1,
+      "bridgedLayers": [
+        "objectives"
+      ],
+      "neighbours": [
+        "civil_works",
+        "in_cab_signalling",
+        "new_trains",
+        "sustain_carbon"
+      ]
+    },
+    {
+      "id": "in_cab_signalling",
+      "label": "In-cab signalling",
+      "layer": "scope",
+      "type": "scope",
+      "sourceName": "in_cab_signalling",
+      "originalNames": [
+        "in_cab_signalling"
+      ],
+      "summary": "In-cab signalling in the notebook’s scope layer.",
+      "degree": 4,
+      "inDegree": 2,
+      "outDegree": 2,
+      "crossLayerDegree": 1,
+      "bridgedLayers": [
+        "stakeholders"
+      ],
+      "neighbours": [
+        "Train_Operator",
+        "new_track",
+        "new_trains",
+        "telecoms"
+      ]
+    },
+    {
+      "id": "new_trains",
+      "label": "New trains",
+      "layer": "scope",
+      "type": "scope",
+      "sourceName": "new_trains",
+      "originalNames": [
+        "new_trains"
+      ],
+      "summary": "New trains in the notebook’s scope layer.",
+      "degree": 6,
+      "inDegree": 1,
+      "outDegree": 5,
+      "crossLayerDegree": 3,
+      "bridgedLayers": [
+        "objectives",
+        "stakeholders"
+      ],
+      "neighbours": [
+        "Safety_Board",
+        "Train_manufacturer",
+        "faster_trains",
+        "in_cab_signalling",
+        "new_track",
+        "telecoms"
+      ]
+    },
+    {
+      "id": "telecoms",
+      "label": "Telecoms",
+      "layer": "scope",
+      "type": "scope",
+      "sourceName": "telecoms",
+      "originalNames": [
+        "telecoms"
+      ],
+      "summary": "Telecoms in the notebook’s scope layer.",
+      "degree": 3,
+      "inDegree": 0,
+      "outDegree": 3,
+      "crossLayerDegree": 1,
+      "bridgedLayers": [
+        "stakeholders"
+      ],
+      "neighbours": [
+        "Safety_Board",
+        "in_cab_signalling",
+        "new_trains"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-01",
+      "source": "Safety_Board",
+      "target": "Train_manufacturer",
+      "relation": "stakeholder-association",
+      "label": "Stakeholder association",
+      "directed": true,
+      "weight": 0.6,
+      "sourceWeights": [
+        0.6
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "stakeholders-03"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-02",
+      "source": "Town_council",
+      "target": "Safety_Board",
+      "relation": "stakeholder-association",
+      "label": "Stakeholder association",
+      "directed": true,
+      "weight": 0.1,
+      "sourceWeights": [
+        0.1
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "stakeholders-02"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-03",
+      "source": "Town_council",
+      "target": "Train_Operator",
+      "relation": "stakeholder-association",
+      "label": "Stakeholder association",
+      "directed": true,
+      "weight": 0.4,
+      "sourceWeights": [
+        0.4
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "stakeholders-01"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-04",
+      "source": "civil_works",
+      "target": "New_construction_method",
+      "relation": "scope-objective",
+      "label": "Scope–objective association",
+      "directed": true,
+      "weight": 0.7,
+      "sourceWeights": [
+        0.7
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-06"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-05",
+      "source": "civil_works",
+      "target": "Town_council",
+      "relation": "scope-stakeholder",
+      "label": "Scope–stakeholder association",
+      "directed": true,
+      "weight": 0.4,
+      "sourceWeights": [
+        0.4
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-14"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-06",
+      "source": "civil_works",
+      "target": "new_station",
+      "relation": "scope-objective",
+      "label": "Scope–objective association",
+      "directed": true,
+      "weight": 0.6,
+      "sourceWeights": [
+        0.6
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-08"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-07",
+      "source": "civil_works",
+      "target": "new_track",
+      "relation": "scope-association",
+      "label": "Scope association",
+      "directed": true,
+      "weight": 0.7,
+      "sourceWeights": [
+        0.7
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "scope-01"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-08",
+      "source": "faster_trains",
+      "target": "Safety_Board",
+      "relation": "objective-stakeholder",
+      "label": "Objective–stakeholder association",
+      "directed": true,
+      "weight": 0.8,
+      "sourceWeights": [
+        0.8
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-04"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-09",
+      "source": "faster_trains",
+      "target": "Train_manufacturer",
+      "relation": "objective-stakeholder",
+      "label": "Objective–stakeholder association",
+      "directed": true,
+      "weight": 1,
+      "sourceWeights": [
+        1
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-03"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-10",
+      "source": "faster_trains",
+      "target": "new_station",
+      "relation": "objective-association",
+      "label": "Objective association",
+      "directed": true,
+      "weight": 5,
+      "sourceWeights": [
+        5
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "objectives-03"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-11",
+      "source": "in_cab_signalling",
+      "target": "Train_Operator",
+      "relation": "scope-stakeholder",
+      "label": "Scope–stakeholder association",
+      "directed": true,
+      "weight": 0.6,
+      "sourceWeights": [
+        0.6
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-13"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-12",
+      "source": "in_cab_signalling",
+      "target": "new_track",
+      "relation": "scope-association",
+      "label": "Scope association",
+      "directed": true,
+      "weight": 0.6,
+      "sourceWeights": [
+        0.6
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "scope-02"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-13",
+      "source": "new_track",
+      "target": "sustain_carbon",
+      "relation": "scope-objective",
+      "label": "Scope–objective association",
+      "directed": true,
+      "weight": 0.5,
+      "sourceWeights": [
+        0.5
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-07"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-14",
+      "source": "new_trains",
+      "target": "Safety_Board",
+      "relation": "scope-stakeholder",
+      "label": "Scope–stakeholder association",
+      "directed": true,
+      "weight": null,
+      "sourceWeights": [
+        0.7,
+        0.9
+      ],
+      "weightStatus": "conflicting",
+      "sourceRows": [
+        "inter_layer_edges-10",
+        "inter_layer_edges-15"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-15",
+      "source": "new_trains",
+      "target": "Train_manufacturer",
+      "relation": "scope-stakeholder",
+      "label": "Scope–stakeholder association",
+      "directed": true,
+      "weight": 1,
+      "sourceWeights": [
+        1
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-11"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-16",
+      "source": "new_trains",
+      "target": "faster_trains",
+      "relation": "scope-objective",
+      "label": "Scope–objective association",
+      "directed": true,
+      "weight": 0.9,
+      "sourceWeights": [
+        0.9
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-05",
+        "inter_layer_edges-09"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-17",
+      "source": "new_trains",
+      "target": "in_cab_signalling",
+      "relation": "scope-association",
+      "label": "Scope association",
+      "directed": true,
+      "weight": 0.9,
+      "sourceWeights": [
+        0.9
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "scope-04"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-18",
+      "source": "new_trains",
+      "target": "new_track",
+      "relation": "scope-association",
+      "label": "Scope association",
+      "directed": true,
+      "weight": 0.7,
+      "sourceWeights": [
+        0.7
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "scope-03"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-19",
+      "source": "sustain_carbon",
+      "target": "New_construction_method",
+      "relation": "objective-association",
+      "label": "Objective association",
+      "directed": true,
+      "weight": 7,
+      "sourceWeights": [
+        7
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "objectives-02"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-20",
+      "source": "sustain_carbon",
+      "target": "Town_council",
+      "relation": "objective-stakeholder",
+      "label": "Objective–stakeholder association",
+      "directed": true,
+      "weight": 0.6,
+      "sourceWeights": [
+        0.6
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-01"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-21",
+      "source": "sustain_carbon",
+      "target": "Train_manufacturer",
+      "relation": "objective-stakeholder",
+      "label": "Objective–stakeholder association",
+      "directed": true,
+      "weight": 0.6,
+      "sourceWeights": [
+        0.6
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-02"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-22",
+      "source": "sustain_carbon",
+      "target": "new_station",
+      "relation": "objective-association",
+      "label": "Objective association",
+      "directed": true,
+      "weight": 10,
+      "sourceWeights": [
+        10
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "objectives-01"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-23",
+      "source": "telecoms",
+      "target": "Safety_Board",
+      "relation": "scope-stakeholder",
+      "label": "Scope–stakeholder association",
+      "directed": true,
+      "weight": 0.6,
+      "sourceWeights": [
+        0.6
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "inter_layer_edges-12"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-24",
+      "source": "telecoms",
+      "target": "in_cab_signalling",
+      "relation": "scope-association",
+      "label": "Scope association",
+      "directed": true,
+      "weight": 0.9,
+      "sourceWeights": [
+        0.9
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "scope-05"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    },
+    {
+      "id": "edge-25",
+      "source": "telecoms",
+      "target": "new_trains",
+      "relation": "scope-association",
+      "label": "Scope association",
+      "directed": true,
+      "weight": 0.9,
+      "sourceWeights": [
+        0.9
+      ],
+      "weightStatus": "unvalidated",
+      "sourceRows": [
+        "scope-06"
+      ],
+      "provenance": "Original notebook edge lists",
+      "interpretation": "Recorded direction is preserved; its project meaning is undocumented. The relation label classifies the endpoint layers."
+    }
+  ],
+  "edgeRecords": [
+    {
+      "id": "record-01",
+      "edgeId": "edge-01",
+      "source": "Safety_Board",
+      "target": "Train_manufacturer",
+      "relation": "stakeholder-association",
+      "weight": 0.6,
+      "directed": true,
+      "sourceRows": [
+        "stakeholders-03"
+      ]
+    },
+    {
+      "id": "record-02",
+      "edgeId": "edge-02",
+      "source": "Town_council",
+      "target": "Safety_Board",
+      "relation": "stakeholder-association",
+      "weight": 0.1,
+      "directed": true,
+      "sourceRows": [
+        "stakeholders-02"
+      ]
+    },
+    {
+      "id": "record-03",
+      "edgeId": "edge-03",
+      "source": "Town_council",
+      "target": "Train_Operator",
+      "relation": "stakeholder-association",
+      "weight": 0.4,
+      "directed": true,
+      "sourceRows": [
+        "stakeholders-01"
+      ]
+    },
+    {
+      "id": "record-04",
+      "edgeId": "edge-04",
+      "source": "civil_works",
+      "target": "New_construction_method",
+      "relation": "scope-objective",
+      "weight": 0.7,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-06"
+      ]
+    },
+    {
+      "id": "record-05",
+      "edgeId": "edge-05",
+      "source": "civil_works",
+      "target": "Town_council",
+      "relation": "scope-stakeholder",
+      "weight": 0.4,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-14"
+      ]
+    },
+    {
+      "id": "record-06",
+      "edgeId": "edge-06",
+      "source": "civil_works",
+      "target": "new_station",
+      "relation": "scope-objective",
+      "weight": 0.6,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-08"
+      ]
+    },
+    {
+      "id": "record-07",
+      "edgeId": "edge-07",
+      "source": "civil_works",
+      "target": "new_track",
+      "relation": "scope-association",
+      "weight": 0.7,
+      "directed": true,
+      "sourceRows": [
+        "scope-01"
+      ]
+    },
+    {
+      "id": "record-08",
+      "edgeId": "edge-08",
+      "source": "faster_trains",
+      "target": "Safety_Board",
+      "relation": "objective-stakeholder",
+      "weight": 0.8,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-04"
+      ]
+    },
+    {
+      "id": "record-09",
+      "edgeId": "edge-09",
+      "source": "faster_trains",
+      "target": "Train_manufacturer",
+      "relation": "objective-stakeholder",
+      "weight": 1,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-03"
+      ]
+    },
+    {
+      "id": "record-10",
+      "edgeId": "edge-10",
+      "source": "faster_trains",
+      "target": "new_station",
+      "relation": "objective-association",
+      "weight": 5,
+      "directed": true,
+      "sourceRows": [
+        "objectives-03"
+      ]
+    },
+    {
+      "id": "record-11",
+      "edgeId": "edge-11",
+      "source": "in_cab_signalling",
+      "target": "Train_Operator",
+      "relation": "scope-stakeholder",
+      "weight": 0.6,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-13"
+      ]
+    },
+    {
+      "id": "record-12",
+      "edgeId": "edge-12",
+      "source": "in_cab_signalling",
+      "target": "new_track",
+      "relation": "scope-association",
+      "weight": 0.6,
+      "directed": true,
+      "sourceRows": [
+        "scope-02"
+      ]
+    },
+    {
+      "id": "record-13",
+      "edgeId": "edge-13",
+      "source": "new_track",
+      "target": "sustain_carbon",
+      "relation": "scope-objective",
+      "weight": 0.5,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-07"
+      ]
+    },
+    {
+      "id": "record-14",
+      "edgeId": "edge-14",
+      "source": "new_trains",
+      "target": "Safety_Board",
+      "relation": "scope-stakeholder",
+      "weight": 0.7,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-10"
+      ]
+    },
+    {
+      "id": "record-15",
+      "edgeId": "edge-14",
+      "source": "new_trains",
+      "target": "Safety_Board",
+      "relation": "scope-stakeholder",
+      "weight": 0.9,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-15"
+      ]
+    },
+    {
+      "id": "record-16",
+      "edgeId": "edge-15",
+      "source": "new_trains",
+      "target": "Train_manufacturer",
+      "relation": "scope-stakeholder",
+      "weight": 1,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-11"
+      ]
+    },
+    {
+      "id": "record-17",
+      "edgeId": "edge-16",
+      "source": "new_trains",
+      "target": "faster_trains",
+      "relation": "scope-objective",
+      "weight": 0.9,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-05",
+        "inter_layer_edges-09"
+      ]
+    },
+    {
+      "id": "record-18",
+      "edgeId": "edge-17",
+      "source": "new_trains",
+      "target": "in_cab_signalling",
+      "relation": "scope-association",
+      "weight": 0.9,
+      "directed": true,
+      "sourceRows": [
+        "scope-04"
+      ]
+    },
+    {
+      "id": "record-19",
+      "edgeId": "edge-18",
+      "source": "new_trains",
+      "target": "new_track",
+      "relation": "scope-association",
+      "weight": 0.7,
+      "directed": true,
+      "sourceRows": [
+        "scope-03"
+      ]
+    },
+    {
+      "id": "record-20",
+      "edgeId": "edge-19",
+      "source": "sustain_carbon",
+      "target": "New_construction_method",
+      "relation": "objective-association",
+      "weight": 7,
+      "directed": true,
+      "sourceRows": [
+        "objectives-02"
+      ]
+    },
+    {
+      "id": "record-21",
+      "edgeId": "edge-20",
+      "source": "sustain_carbon",
+      "target": "Town_council",
+      "relation": "objective-stakeholder",
+      "weight": 0.6,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-01"
+      ]
+    },
+    {
+      "id": "record-22",
+      "edgeId": "edge-21",
+      "source": "sustain_carbon",
+      "target": "Train_manufacturer",
+      "relation": "objective-stakeholder",
+      "weight": 0.6,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-02"
+      ]
+    },
+    {
+      "id": "record-23",
+      "edgeId": "edge-22",
+      "source": "sustain_carbon",
+      "target": "new_station",
+      "relation": "objective-association",
+      "weight": 10,
+      "directed": true,
+      "sourceRows": [
+        "objectives-01"
+      ]
+    },
+    {
+      "id": "record-24",
+      "edgeId": "edge-23",
+      "source": "telecoms",
+      "target": "Safety_Board",
+      "relation": "scope-stakeholder",
+      "weight": 0.6,
+      "directed": true,
+      "sourceRows": [
+        "inter_layer_edges-12"
+      ]
+    },
+    {
+      "id": "record-25",
+      "edgeId": "edge-24",
+      "source": "telecoms",
+      "target": "in_cab_signalling",
+      "relation": "scope-association",
+      "weight": 0.9,
+      "directed": true,
+      "sourceRows": [
+        "scope-05"
+      ]
+    },
+    {
+      "id": "record-26",
+      "edgeId": "edge-25",
+      "source": "telecoms",
+      "target": "new_trains",
+      "relation": "scope-association",
+      "weight": 0.9,
+      "directed": true,
+      "sourceRows": [
+        "scope-06"
+      ]
+    }
+  ],
+  "relationTypes": [
+    {
+      "id": "objective-association",
+      "label": "Objective association",
+      "layers": [
+        "objectives",
+        "objectives"
+      ]
+    },
+    {
+      "id": "stakeholder-association",
+      "label": "Stakeholder association",
+      "layers": [
+        "stakeholders",
+        "stakeholders"
+      ]
+    },
+    {
+      "id": "scope-association",
+      "label": "Scope association",
+      "layers": [
+        "scope",
+        "scope"
+      ]
+    },
+    {
+      "id": "objective-stakeholder",
+      "label": "Objective–stakeholder association",
+      "layers": [
+        "objectives",
+        "stakeholders"
+      ]
+    },
+    {
+      "id": "scope-objective",
+      "label": "Scope–objective association",
+      "layers": [
+        "scope",
+        "objectives"
+      ]
+    },
+    {
+      "id": "scope-stakeholder",
+      "label": "Scope–stakeholder association",
+      "layers": [
+        "scope",
+        "stakeholders"
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "id": "manufacturer-alias",
+      "title": "One manufacturer",
+      "detail": "Train_manfacturer is treated as a spelling variant of Train_manufacturer. Both names remain in the original extract.",
+      "sourceRows": [
+        "inter_layer_edges-11"
+      ]
+    },
+    {
+      "id": "repeated-trains-objective",
+      "title": "One repeated association",
+      "detail": "The identical new_trains → faster_trains row with weight 0.9 occurs twice. It counts as one association.",
+      "sourceRows": [
+        "inter_layer_edges-05",
+        "inter_layer_edges-09"
+      ]
+    },
+    {
+      "id": "conflicting-trains-safety",
+      "title": "An unresolved weight",
+      "detail": "New trains → safety board occurs with weights 0.7 and 0.9. Both values are retained and neither is selected as authoritative.",
+      "sourceRows": [
+        "inter_layer_edges-10",
+        "inter_layer_edges-15"
+      ]
+    },
+    {
+      "id": "recorded-direction",
+      "title": "Recorded direction preserved",
+      "detail": "The runtime retains directed parallel records. The display bundles records with the same endpoints and exposes each value in the inspector. An undirected projection is used only for explicitly labelled connected-neighbour exploration."
+    }
+  ],
+  "sources": [
+    {
+      "id": "notebook",
+      "title": "Original personal notebook",
+      "path": "sources/notebooks/stakeholder_objectives.ipynb"
+    },
+    {
+      "id": "rows",
+      "title": "All 27 original edge records",
+      "path": "data/original-extract.json"
+    },
+    {
+      "id": "commentary",
+      "title": "Original comments and Markdown",
+      "path": "sources/commentary.md"
+    },
+    {
+      "id": "provenance",
+      "title": "Source hashes and publication edits",
+      "path": "sources/provenance.json"
+    }
+  ],
+  "metrics": {
+    "nodeCount": 13,
+    "edgeCount": 26,
+    "associationCount": 25,
+    "layerCount": 3,
+    "componentCount": 1,
+    "crossLayerEdges": 13,
+    "intralayerEdges": 12,
+    "isolatedNodeCount": 0,
+    "density": 0.32051282051282054,
+    "densityProjection": "simple-undirected",
+    "directedDensity": 0.16025641025641027,
+    "originalNodeCount": 14,
+    "originalEdgeRecords": 27,
+    "conflictingWeightEdges": 1,
+    "layerCounts": [
+      {
+        "id": "objectives",
+        "label": "Objectives",
+        "nodes": 4,
+        "intralayerEdges": 3,
+        "density": 0.5,
+        "densityProjection": "simple-undirected",
+        "directedDensity": 0.25
+      },
+      {
+        "id": "stakeholders",
+        "label": "Stakeholders",
+        "nodes": 4,
+        "intralayerEdges": 3,
+        "density": 0.5,
+        "densityProjection": "simple-undirected",
+        "directedDensity": 0.25
+      },
+      {
+        "id": "scope",
+        "label": "Scope",
+        "nodes": 5,
+        "intralayerEdges": 6,
+        "density": 0.6,
+        "densityProjection": "simple-undirected",
+        "directedDensity": 0.3
+      }
+    ],
+    "relationCounts": {
+      "stakeholder-association": 3,
+      "scope-objective": 4,
+      "scope-stakeholder": 5,
+      "scope-association": 6,
+      "objective-stakeholder": 4,
+      "objective-association": 3
+    },
+    "degreeRanking": [
+      {
+        "id": "new_trains",
+        "label": "New trains",
+        "degree": 6,
+        "crossLayerDegree": 3
+      },
+      {
+        "id": "Safety_Board",
+        "label": "Safety board",
+        "degree": 5,
+        "crossLayerDegree": 3
+      },
+      {
+        "id": "sustain_carbon",
+        "label": "Carbon sustainability",
+        "degree": 5,
+        "crossLayerDegree": 3
+      },
+      {
+        "id": "Town_council",
+        "label": "Town council",
+        "degree": 4,
+        "crossLayerDegree": 2
+      },
+      {
+        "id": "Train_manufacturer",
+        "label": "Train manufacturer",
+        "degree": 4,
+        "crossLayerDegree": 3
+      },
+      {
+        "id": "civil_works",
+        "label": "Civil works",
+        "degree": 4,
+        "crossLayerDegree": 3
+      },
+      {
+        "id": "faster_trains",
+        "label": "Faster trains",
+        "degree": 4,
+        "crossLayerDegree": 3
+      },
+      {
+        "id": "in_cab_signalling",
+        "label": "In-cab signalling",
+        "degree": 4,
+        "crossLayerDegree": 1
+      },
+      {
+        "id": "new_track",
+        "label": "New track",
+        "degree": 4,
+        "crossLayerDegree": 1
+      },
+      {
+        "id": "new_station",
+        "label": "New station",
+        "degree": 3,
+        "crossLayerDegree": 1
+      },
+      {
+        "id": "telecoms",
+        "label": "Telecoms",
+        "degree": 3,
+        "crossLayerDegree": 1
+      },
+      {
+        "id": "New_construction_method",
+        "label": "New construction method",
+        "degree": 2,
+        "crossLayerDegree": 1
+      },
+      {
+        "id": "Train_Operator",
+        "label": "Train operator",
+        "degree": 2,
+        "crossLayerDegree": 1
+      }
+    ],
+    "analysisPolicy": "Runtime edge count includes distinct parallel records. Degree, cross-layer counts and density use distinct endpoint pairs. Connected degree uses an explicit undirected projection; in/out degree uses recorded direction. All metrics exclude source weights.",
+    "metricDefinitions": {
+      "edgeCount": "Directed MultiDiGraph records, including the two conflicting safety weights.",
+      "associationCount": "Simple directed graph: distinct ordered endpoint pairs; parallel records collapsed.",
+      "componentCount": "Connected components of the simple undirected projection (weak components of the directed graph).",
+      "crossLayerEdges": "Simple undirected projection: distinct endpoint pairs in different layers.",
+      "intralayerEdges": "Simple undirected projection: distinct endpoint pairs in the same layer.",
+      "isolatedNodeCount": "Simple undirected projection: nodes with no incident edges.",
+      "density": "Simple undirected projection: m / (n * (n - 1) / 2), ignoring weights and parallel records.",
+      "directedDensity": "Simple directed graph: m / (n * (n - 1)), ignoring weights and parallel records.",
+      "degreeRanking": "Simple undirected projection: number of distinct adjacent entities, regardless of orientation.",
+      "layerCounts": "Each layer's induced simple undirected subgraph; directedDensity uses its simple directed counterpart.",
+      "relationCounts": "Simple directed graph: display pairs grouped by their endpoint-layer relation.",
+      "node.inDegree": "Distinct predecessors in the simple directed graph.",
+      "node.outDegree": "Distinct successors in the simple directed graph.",
+      "node.degree": "Distinct neighbours in the simple undirected projection.",
+      "node.crossLayerDegree": "Distinct neighbours in other layers in the simple undirected projection."
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "title": "Three queries that distinguish the model from its picture",
+  "verifiedDate": "2026-11-21",
+  "independentlyCheckedAgainstSourceRows": true,
+  "weightPolicy": "Queries are unweighted. A hop counts one recorded connection; it is not a cost, probability, time or causal effect.",
+  "queries": [
+    {
+      "id": "station-direction",
+      "title": "What connects to the new station?",
+      "node": "new_station",
+      "result": {
+        "incoming": [
+          "civil_works",
+          "faster_trains",
+          "sustain_carbon"
+        ],
+        "outgoing": [],
+        "undirectedNeighbours": [
+          "civil_works",
+          "faster_trains",
+          "sustain_carbon"
+        ],
+        "sourceRows": [
+          "inter_layer_edges-08",
+          "objectives-01",
+          "objectives-03"
+        ]
+      },
+      "finding": "The new station has three incoming connections and no outgoing connection. Ignoring direction reveals its three neighbours, but does not create three supported outward routes."
+    },
+    {
+      "id": "track-carbon-council",
+      "title": "Can the recorded arrows connect new track to the town council?",
+      "result": {
+        "directedPath": [
+          "new_track",
+          "sustain_carbon",
+          "Town_council"
+        ],
+        "steps": [
+          {
+            "source": "new_track",
+            "target": "sustain_carbon",
+            "sourceRows": [
+              "inter_layer_edges-07"
+            ]
+          },
+          {
+            "source": "sustain_carbon",
+            "target": "Town_council",
+            "sourceRows": [
+              "inter_layer_edges-01"
+            ]
+          }
+        ],
+        "directedDistance": 2,
+        "reverseDirectedReachable": false,
+        "reverseUndirectedDistance": 2
+      },
+      "finding": "A two-hop recorded route passes from new track through carbon sustainability to the town council. No directed return route exists. The undirected projection allows the return in two hops; that is a change in the question, not new project evidence."
+    },
+    {
+      "id": "safety-parallel-records",
+      "title": "How many records connect new trains to the safety board?",
+      "result": {
+        "source": "new_trains",
+        "target": "Safety_Board",
+        "runtimeRecordCount": 2,
+        "displayConnectionCount": 1,
+        "weights": [
+          0.7,
+          0.9
+        ],
+        "sourceRows": [
+          "inter_layer_edges-10",
+          "inter_layer_edges-15"
+        ],
+        "resolvedWeight": null
+      },
+      "finding": "Two directed records carry conflicting weights, 0.7 and 0.9. The display draws one connection and retains both records in its inspector. A simple graph on its own loses their multiplicity."
+    }
+  ],
+  "representations": [
+    {
+      "id": "runtime",
+      "label": "Directed multilayer runtime",
+      "nodes": 13,
+      "records": 26,
+      "layersRetained": true,
+      "directionRetained": true,
+      "parallelRecordsRetained": true
+    },
+    {
+      "id": "flat-display",
+      "label": "Flat drawing",
+      "nodes": 13,
+      "records": 26,
+      "drawnConnections": 25,
+      "layersRetained": true,
+      "directionRetained": true,
+      "parallelRecordsRetained": true,
+      "change": "Only node positions and layer grouping on screen change; the same data, arrows and inspector remain."
+    },
+    {
+      "id": "simple-directed",
+      "label": "Simple directed analysis",
+      "nodes": 13,
+      "connections": 25,
+      "directionRetained": true,
+      "parallelRecordsRetained": false,
+      "change": "Parallel records collapse to one ordered pair; source weights are excluded from analysis."
+    },
+    {
+      "id": "simple-undirected",
+      "label": "Undirected neighbourhood projection",
+      "nodes": 13,
+      "connections": 25,
+      "directionRetained": false,
+      "parallelRecordsRetained": false,
+      "change": "Directions and parallel multiplicity are discarded; node layer labels remain available."
+    }
+  ]
+}

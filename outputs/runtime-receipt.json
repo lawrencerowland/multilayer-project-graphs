@@ -1,0 +1,28 @@
+{
+  "verifiedDate": "2026-11-21",
+  "python": "3.12.14",
+  "packages": {
+    "py3plex": "2.0.93",
+    "networkx": "3.7",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1"
+  },
+  "source": "https://pypi.org/project/py3plex/2.0.93/",
+  "networkType": "multilayer",
+  "runtimeGraphClass": "MultiDiGraph",
+  "directed": true,
+  "nodeCount": 13,
+  "edgeCount": 26,
+  "displayConnectionCount": 25,
+  "originalReconstruction": {
+    "nodeCount": 14,
+    "edgeCount": 27,
+    "directed": true,
+    "allRowsWeightsAndDirectionsVerified": true
+  },
+  "automaticCouplingEdges": 0,
+  "sourceNodeAndEdgeSetsVerified": true,
+  "sourceCheckedQueryCount": 3,
+  "datasetSha256": "3d1c950ad3721da720af2e99567e9a7ba329839349e4f57b06b007df280eb7d6"
+}
