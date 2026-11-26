@@ -20,12 +20,17 @@
       <div class="introduction-copy"><p class="question">Who and what connects to a project objective?</p><p>Keep objectives, stakeholders and scope in view while following the links between them. Then flatten the same model and see what becomes harder to read.</p><p class="source-caption">Reconstructed from Lawrence’s original project notebook. <a href="#method">Read the modelling choices</a></p></div>
     </section>
     <section class="explorer" id="explorer" aria-label="Explore the railway model">
-      <div class="reading-bar"><span class="reading-label">Start with a question</span><div id="guides" class="guide-buttons" aria-label="Guided readings"></div></div>
+      <div class="connection-witness" id="connection-witness"><h2>Keep one connection in view</h2>
+        <p id="record-question">Read one recorded link in three layers, then put the same records on one plane.</p>
+        <p id="selected-record" aria-live="polite"></p>
+        <button type="button" id="inspect-weights">Inspect new trains → safety board</button>
+      </div>
       <div class="explorer-toolbar">
         <div class="tab-controls" role="tablist" aria-label="Explore as"><button id="graph-tab" role="tab" aria-controls="graph-view" aria-selected="true" data-tab="graph">Graph</button><button id="index-tab" role="tab" aria-controls="index-view" aria-selected="false" data-tab="index">Connection index</button></div>
         <div class="view-switch" role="group" aria-label="Graph layout"><button data-layout="layered" aria-pressed="true">Three layers</button><button data-layout="flat" aria-pressed="false">One plane</button></div>
         <button class="text-button reset-button" id="reset">Show whole model <span aria-hidden="true">↺</span></button>
       </div>
+      <div class="reading-bar"><span class="reading-label">Start with a question</span><div id="guides" class="guide-buttons" aria-label="Guided readings"></div></div>
       <div class="filters"><label class="search-label"><span>Find a record</span><input id="search" type="search" placeholder="Carbon, council, track…" autocomplete="off"></label><label><span>Layer</span><select id="layer-filter"><option value="all">All layers</option></select></label><label><span>Connection</span><select id="relation-filter"><option value="all">All types</option></select></label><div class="visible-count" id="visible-count" aria-live="polite"></div></div>
       <div class="explorer-body">
         <div class="main-view">

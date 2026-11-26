@@ -310,6 +310,24 @@
     renderGraph(model);
     renderIndex(model);
     renderInspector();
+    const chosenEdge = edges.get(state.edge);
+    const chosenNode = nodes.get(state.node);
+    const count = data.edges.length + ' drawn connections in the full model.';
+    const mode = state.layout === 'flat' ? 'One plane' : 'Three layers';
+    let receipt;
+    if (chosenEdge) {
+      const weights = data.edgeRecords.filter(record => record.edgeId === chosenEdge.id).map(record => record.weight);
+      receipt = nodes.get(chosenEdge.source).label + ' → ' + nodes.get(chosenEdge.target).label +
+        '. Recorded weight' + (weights.length === 1 ? ': ' : 's: ') + weights.join(' and ') +
+        '. The arrow preserves source direction; the weights have no reported unit.';
+    } else if (chosenNode) {
+      const links = linksFor(chosenNode.id);
+      receipt = chosenNode.label + '. ' + links.filter(edge => edge.target === chosenNode.id).length +
+        ' incoming, ' + links.filter(edge => edge.source === chosenNode.id).length + ' outgoing.';
+    } else {
+      receipt = 'Select a record in the graph or connection index to inspect the same source rows in either layout.';
+    }
+    document.getElementById('selected-record').textContent = mode + ' · ' + count + ' ' + receipt;
     document.getElementById('visible-count').textContent = `${model.nodes.length} of ${data.nodes.length} records · ${model.edges.length} of ${data.edges.length} connections`;
     document.getElementById('layout-caption').textContent = state.neighbourhood ? 'Adjacent records in either direction. The recorded arrows remain visible.' : state.layout === 'layered' ? 'Each record belongs to one layer. Links can stay within a layer or cross its boundary.' : 'The same records and directed links, placed in one plane. Select a record to recover its layer.';
     for (const button of document.querySelectorAll('[data-layout]')) button.setAttribute('aria-pressed', String(button.dataset.layout === state.layout));
@@ -407,6 +425,14 @@
     });
     document.getElementById('guides').append(button);
   }
+  document.getElementById('inspect-weights').addEventListener('click', () => {
+    const record = data.edges.find(edge => edge.source === 'new_trains' && edge.target === 'Safety_Board');
+    Object.assign(state, {node: record.source, layer: 'all', relation: 'all', search: '', neighbourhood: false});
+    document.getElementById('layer-filter').value = 'all';
+    document.getElementById('relation-filter').value = 'all';
+    document.getElementById('search').value = '';
+    selectEdge(record.id);
+  });
   function changeFilter(key, value) {
     Object.assign(state, {node: null, edge: null, guide: null, neighbourhood: false, [key]: value});
     updateHash('', '');
