@@ -52,6 +52,8 @@ def markdown(text):
 def shell(title, route, body, nested=False):
     prefix='../' if nested else ''
     layer_assets = '<link rel="stylesheet" href="https://experimentsin.ai/assets/site-layer.css"><script defer data-experiment-layer src="https://experimentsin.ai/assets/site-layer.js"></script>' if not route else ''
+    if route in ('essai-01/commentary.html', 'essai-01/findings.html'):
+        layer_assets += '<script defer src="https://experimentsin.ai/assets/atlas-essai.js"></script>'
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} · Foray 342</title><meta name="description" content="A project in connected layers: a public enquiry into stakeholders, objectives and scope, with a reproducible Py3Plex essai."><link rel="canonical" href="{ORIGIN+route}"><style>{CSS}</style>{layer_assets}</head><body><a class="skip" href="#main">Skip to content</a><main id="main"><nav aria-label="Breadcrumb"><a href="https://experimentsin.ai/experiments/graphs-and-representations/">Graphs and representations</a><a href="https://experimentsin.ai/side-projects.html">All experiments</a><a href="{prefix}index.html">Foray 342</a></nav>{body}<footer><a href="{prefix}index.html">Foray entrance</a><a href="{prefix}prompt.html">Full foray prompt</a><a href="https://github.com/lawrencerowland/multilayer-project-graphs">Source and reproduction</a><span>21 November 2026 · an open enquiry</span></footer></main></body></html>'''
 
 def art(kind):
