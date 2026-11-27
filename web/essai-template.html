@@ -7,6 +7,7 @@
   <title>Rail through three layers · What do project layers reveal?</title>
   <link rel="canonical" href="https://experimentsin.ai/multilayer-project-graphs/essai-01/">
   <link rel="stylesheet" href="../web/style.css">
+<script defer src="https://experimentsin.ai/assets/atlas-essai.js"></script><script defer src="https://experimentsin.ai/assets/essai-passages.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#explorer">Skip to the explorer</a>
@@ -20,12 +21,17 @@
       <div class="introduction-copy"><p class="question">Who and what connects to a project objective?</p><p>Keep objectives, stakeholders and scope in view while following the links between them. Then flatten the same model and see what becomes harder to read.</p><p class="source-caption">Reconstructed from Lawrence’s original project notebook. <a href="#method">Read the modelling choices</a></p></div>
     </section>
     <section class="explorer" id="explorer" aria-label="Explore the railway model">
-      <div class="reading-bar"><span class="reading-label">Start with a question</span><div id="guides" class="guide-buttons" aria-label="Guided readings"></div></div>
+      <div class="connection-witness" id="connection-witness"><h2>Keep one connection in view</h2>
+        <p id="record-question">Read one recorded link in three layers, then put the same records on one plane.</p>
+        <p id="selected-record" aria-live="polite"></p>
+        <button type="button" id="inspect-weights">Inspect new trains → safety board</button>
+      </div>
       <div class="explorer-toolbar">
         <div class="tab-controls" role="tablist" aria-label="Explore as"><button id="graph-tab" role="tab" aria-controls="graph-view" aria-selected="true" data-tab="graph">Graph</button><button id="index-tab" role="tab" aria-controls="index-view" aria-selected="false" data-tab="index">Connection index</button></div>
         <div class="view-switch" role="group" aria-label="Graph layout"><button data-layout="layered" aria-pressed="true">Three layers</button><button data-layout="flat" aria-pressed="false">One plane</button></div>
         <button class="text-button reset-button" id="reset">Show whole model <span aria-hidden="true">↺</span></button>
       </div>
+      <div class="reading-bar"><span class="reading-label">Start with a question</span><div id="guides" class="guide-buttons" aria-label="Guided readings"></div></div>
       <div class="filters"><label class="search-label"><span>Find a record</span><input id="search" type="search" placeholder="Carbon, council, track…" autocomplete="off"></label><label><span>Layer</span><select id="layer-filter"><option value="all">All layers</option></select></label><label><span>Connection</span><select id="relation-filter"><option value="all">All types</option></select></label><div class="visible-count" id="visible-count" aria-live="polite"></div></div>
       <div class="explorer-body">
         <div class="main-view">
@@ -40,6 +46,11 @@
         <aside id="inspector" class="inspector" aria-label="Selected record details" aria-live="polite"></aside>
       </div>
     </section>
+    <div id="essai-reading" data-essai-passages>
+<section data-essai-passage="same-line" data-passage-label="Why does one line have two weights?"><h2>Why does one line have two weights?</h2><p>Select new trains → safety board. The notebook carries two rows for that directed connection: one records 0.7 and another 0.9. The drawing groups them into one line and the inspector retains the two source rows. Choosing one number or averaging them would add an interpretation that the notebook never supplied.</p><p>The line is one of 25 drawn connections. Its single stroke records a pair of endpoints. The original record list is where the disagreement between its weights remains visible.</p></section>
+<section data-essai-passage="flatten" data-passage-label="What changes when the records share one plane?"><h2>What changes when the records share one plane?</h2><p>Switch from Three layers to One plane while keeping the connection selected. New trains remains a scope record, safety board remains a stakeholder, and the recorded direction and both weights stay in the receipt. Their spatial grouping changes. The underlying rows stay in place.</p><p>Layered positions make the change of role visible as the arrow crosses the page. The connection index gives the same relationship without requiring the reader to trace that line through the drawing.</p></section>
+<section data-essai-passage="direction" data-passage-label="What can a project reader take from the arrow?"><h2>What can a project reader take from the arrow?</h2><p>The source notebook creates a directed network. Looking at a record’s incoming and outgoing links answers different questions, even when the drawing puts their endpoints close together. None of the weights has a documented common unit. The two numbers cannot be read as competing probabilities of approval.</p><p>The findings page preserves the reconstruction and the corrections. The commentary keeps the original voice and data conventions so a reader can check where source evidence ends and the present interpretation begins.</p></section>
+</div>
     <section class="model-notes" id="method" aria-labelledby="method-title">
       <div class="method-intro"><p class="eyebrow">Under the drawing</p><h2 id="method-title">A small model.<br>Visible choices.</h2><p>Layer membership gives each record a role. The flat view retains the records and links while removing their spatial grouping.</p><p><a class="inline-link" href="findings.html">Read the findings and method <span aria-hidden="true">↗</span></a></p><a class="inline-link" href="commentary.html">Read the original commentary <span aria-hidden="true">↗</span></a></div>
       <div class="method-content"><div id="model-statistics" class="statistics"></div><div class="method-grid"><div><h3>What a line means</h3><p id="direction-note">The original notebook creates a directed network. This edition preserves recorded direction. Reading all connections around a record includes both incoming and outgoing links.</p></div><div><h3>What a weight means</h3><p>Weights are preserved as entered. Their units and scale are unspecified. Every drawn line has the same width, so a value of 10 is never presented as a stronger claim than a value of 0.9.</p></div></div><details class="method-detail"><summary>Corrections and unresolved choices</summary><div id="corrections"></div></details><details class="method-detail"><summary>Current Python run and data schema</summary><div id="run-results"></div><div id="schema-details"></div></details><details class="method-detail"><summary>Source records</summary><div id="sources"></div></details><div class="export-controls"><button id="download-data">Download model JSON</button><button id="download-svg">Download current drawing</button></div></div>

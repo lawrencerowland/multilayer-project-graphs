@@ -29,7 +29,7 @@ The deployment workflow repeats the model, checks and explicit static-site build
 
 `sources/notebooks/` contains the three personal notebooks, with code and Markdown retained and saved outputs/execution metadata removed. Their original revision and hashes are recorded in `sources/provenance.json`. The two historical drawings already published in the main website's Library remain unchanged there. Source rows and commentary are retained separately from the curated dataset and results. The source notebooks are historical readings; their old Colab badges and tutorial dependencies have not been rewritten. `project_graph.py` is the current, tested reproduction route.
 
-The old fork is being retired after this selected personal work is published and verified. This is the new maintained project, not a backup of the fork. Numerical weights in the old example have no common documented scale; the essai does not treat them as probabilities, causal effects, costs or distances. See the model method and correction ledger for the precise interpretation used in this run.
+This maintained project supersedes the old fork for this personal work. This is the new maintained project, not a backup of the fork. Numerical weights in the old example have no common documented scale; the essai does not treat them as probabilities, causal effects, costs or distances. See the model method and correction ledger for the precise interpretation used in this run.
 
 ## Layout
 
